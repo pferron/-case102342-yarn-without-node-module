@@ -5,29 +5,25 @@
     "projectToken": "",
     "baseBranches": []
   },
-  "scanSettingsSAST": {
-    "enableScan": false,
-    "scanPullRequests": false,
-    "incrementalScan": true,
-    "baseBranches": [],
-    "snippetSize": 10
-  },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
     "useMendCheckNames": true
-  },
-  "checkRunSettingsSAST": {
-    "checkRunConclusionLevel": "failure",
-    "severityThreshold": "high"
   },
   "issueSettings": {
     "minSeverityLevel": "LOW",
     "issueType": "DEPENDENCY"
   },
   "remediateSettings": {
-    "workflowRules": {
-      "enabled": true
+  "workflowRules": {
+    "enabled": true
+  },
+  "enableRenovate": true,
+    "extends": ["config:base"],
+    "ignorePresets": [":prHourlyLimit2"],
+    "transitiveRemediation": true,
+    "major": {
+    "dependencyDashboardApproval": true
     }
   }
 }
